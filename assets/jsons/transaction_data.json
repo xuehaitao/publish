@@ -1,0 +1,21 @@
+{
+    "operate_data":{
+        "loan_total": "1,477,112,662.80",
+        "loan_nums": "3227",
+        "loan_surplus": "560,100,000.00",
+        "loan_surplus_nums": "1160",
+        "investor_nums": "5981",
+        "borrower_nums": "86",
+        "current_investor_nums": "1960",
+        "current_borrower_nums": "9",
+        "top10_borrower_returned_rate": "81.88",
+        "top1_borrower_returned_rate": "22.32",
+        "relationship_loan_surplus": "0",
+        "relationship_loan_surplus_nums": "0",
+        "overdue_amount_nums": "0",
+        "overdue_90days_amount": "0",
+        "overdue_90days_nums": "0",
+        "compensatory_amount_nums": "0",
+        "closing_date": "2018年3月31日"
+    }
+}

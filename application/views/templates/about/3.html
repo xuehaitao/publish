@@ -1,0 +1,309 @@
+{include file="about/header.html"} 
+<!--运营报告-->
+	<script type="text/javascript" src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/layer.js?v=201802121503"></script>
+		{literal}
+		<style>
+			.wrap div{padding:0;}
+			.map{width:100%;margin-top:20px;margin-bottom:60px;}
+			li{list-style-type:none;}
+			.main{width: 100%;margin-top:30px;}
+			.cql_rp_line{margin-left:30px;margin-right:30px;margin-top:25px;margin-bottom:25px;padding:0;width:1140px;height:1px;font-size:0;background:#d9d9d9;}
+			.bigc{font-size:24px;margin-top:30px;margin-bottom:25px;color:#252525;}
+			.bige{font-size:14px;margin-left:10px;margin-right:1px;color:#252525;}
+			.smalle{font-size:10px;letter-spacing:1px;color:#252525;}
+			.ctitle{color:#252525;}
+			.main p{margin-left: 30px;}
+			/**Tab swich begain*/
+			.container, .container_c{width: 1204px;}
+			.nav_container{width:100%;}
+			.nav_top{width:143px;display:inline-block;}
+			.nav_bottom{width:100%;margin-top:15px;}
+			.circle{position:absolute;width:12px;height:12px;border-radius:50%;}
+			.one{margin: -12px 0 0 133px;background: #d8d8d8;}
+			.two {margin: -12px 0 0 400px;background: #d8d8d8;}
+			.circle:after{content:'';margin:3px;display:table;width:6px;height:6px;border-radius:50%;}
+			.one.active,.two.active{background: #96b1d6;}
+			.nav_container .tag{width:142px; height:42px;position:relative; color:#000;font-size:16px;letter-spacing: 1px;text-align: center;line-height:40px;cursor:pointer;}
+			.nav_container .arrow{display:none;}
+			.nav_container .active .tag{border:1px solid #96b1d6;border-radius:5px;background-color:#96b1d6;color:#FFF;font-size:16px;letter-spacing: 1px;text-align: center;line-height:40px;}
+			.nav_container .active .arrow{ position:absolute; width:40px; height:30px; left:50px; bottom:-30px; overflow:hidden;display:"";}
+			.nav_container .active .arrow *{ display:block; position:absolute; font-size:40px; line-height:30px; width:40px;font-family:SimSun; font-style:normal; font-weight:normal;text-align:center; vertical-align:middle;display:"";}
+			.nav_container .active .arrow em{color:#96b1d6;top:-15px;display:"";}
+			.nav_container .active .arrow span{color:#96b1d6;top:-22px;display:"";}
+			.tab_content:after{clear: both;content:" ";display:block;}
+			.tab_content li{float:left;margin-left: 80px;margin-top: 40px;width: 478px;border-radius:3px;border:1px solid #8d8d8d;overflow:hidden;}
+			.tab_content li a{ display:block;color:#FFF;text-align:center}
+			.tab_content li a b{display:block; height:264px;}
+			.tab_content li a img{margin: 0 auto;width:476px;height:264px;}
+			.tab_content .report_foot{ display:block; height:150px; line-height:30px;background-color:#FFF; color: #999; }
+			.tab_content .vline{float:left;width:3px;height:18px;background:#000;margin-left:40px;display:inline-block;margin-top:10px;}
+			.tab_content .rleft{margin-left:-200px;}
+			.tab_content .rright{margin-left:-160px;}
+			.tab_content_c .rleft{margin-left:-200px;}
+			.tab_content_c .rright{margin-left:-160px;}
+			.report_name{font-size:16px;letter-spacing:1px;font-size:18px;display: inline-block;margin-top:3px;}
+			.report_dur{width:400px;text-align:center;font-size:16px;color:#000;background-color:#f0f0f0;margin:0 auto;letter-spacing:1px;margin-top:10px;}
+			.report_btn{width:120px;height:35px;border-radius:3px;background-color:#96b1d6;color:#FFF;text-align:center;float:right;margin-right:40px;line-height:35px;font-size:16px;margin-top:15px;}
+			/**财务报告*/
+			.nav_container_c{width:100%;}
+			.nav_top_c{width:143px;display:inline-block;}
+			.nav_bottom_c{width:100%;margin-top:15px;}
+			.circle_c{position:absolute;width:12px;height:12px;background:#d8d8d8;border-radius:50%;}
+			.one_c{margin: -12px 0 0 133px;}
+			.two_c{margin: -12px 0 0 400px;}
+			.circle_c:after {content:'';margin:3px;display:table;width:6px;height:6px;border-radius:50%;}
+			.one_c.active,.two_c.active{background: #96b1d6;}
+			.nav_container_c .tag_c{width:142px; height:42px;position:relative; color:#000;font-size:16px;letter-spacing: 1px;text-align: center;line-height:40px;cursor:pointer;}
+			.nav_container_c .arrow_c{display:none;}
+			.nav_container_c .active .tag_c{border:1px solid #96b1d6;border-radius:5px;background-color:#96b1d6;color:#FFF;font-size:16px;letter-spacing: 1px;text-align: center;line-height:40px;}
+			.nav_container_c .active .arrow_c{ position:absolute; width:40px; height:30px; left:50px; bottom:-30px; overflow:hidden;display:"";}
+			.nav_container_c .active .arrow_c *{ display:block; position:absolute; font-size:40px; line-height:30px; width:40px;font-family:SimSun; font-style:normal; font-weight:normal;text-align:center; vertical-align:middle;display:"";}
+			.nav_container_c .active .arrow_c em{ color:#96b1d6; top:-15px;display:"";}
+			.nav_container_c .active .arrow_c span{ color:#96b1d6; top:-22px;display:"";}
+			.tab_content_c:after { clear: both; content: " "; display: block;}
+			.tab_content_c li{float:left;margin-left: 80px;margin-top: 40px;width: 478px;border-radius:3px;border:1px solid #8d8d8d;overflow:hidden;}
+			.tab_content_c li a{ display:block;color:#FFF;text-align:center}
+			.tab_content_c li a b{display:block;height:264px;}
+			.tab_content_c li a img{margin: 0 auto;width:476px;height:264px;}
+			.tab_content_c .report_foot{display:block;height:150px;line-height:30px;background-color:#FFF;color:#999;}
+			.tab_content_c .vline{float:left;width:3px;height:18px;background:#000;margin-left:40px;display:inline-block;margin-top:10px;}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				//Default Action
+				$(".tab_content").hide(); //Hide all content
+				$(".arrow").hide();
+				$(".nav_top:first").addClass("active").show();
+				$(".tab_content:first").show(); //Show first tab content
+				$(".arrow:first").show();
+
+				//On Click Event
+				$(".tag").click(function() {
+					$(".nav_top").removeClass("active"); //Remove any "active" class
+					$(".circle").removeClass("active");
+					$(this).parent().addClass("active"); //Add "active" class to selected tab
+					//$(this).addClass("active");
+					var index = $(".tag").index(this);
+					//alert(index);
+					var activeNav = $(".nav_top").eq(index);
+					var activeCircle = $(".circle").eq(index);
+					var activeArrow = $(".arrow").eq(index);
+					$(activeNav).addClass("active");
+					$(activeCircle).addClass("active");
+					$(".arrow").hide();
+					$(activeArrow).show();
+					$(".tab_content").hide(); //Hide all tab content
+					var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+					$(activeTab).fadeIn(); //Fade in the active content
+					return false;
+				});
+
+				$(".tab_content_c").hide();
+				$(".arrow_c").hide();
+				$(".nav_top_c:first").addClass("active").show();
+				$(".tab_content_c:first").show();
+				$(".arrow_c:first").show();
+
+				//On Click Event
+				$(".tag_c").click(function() {
+					$(".nav_top_c").removeClass("active");
+					$(".circle_c").removeClass("active");
+					$(this).parent().addClass("active");
+					//$(this).addClass("active");
+					var index = $(".tag_c").index(this);
+					//alert(index);
+					var activeNav = $(".nav_top_c").eq(index);
+					var activeCircle = $(".circle_c").eq(index);
+					var activeArrow = $(".arrow_c").eq(index);
+					$(activeNav).addClass("active");
+					$(activeCircle).addClass("active");
+					$(".arrow_c").hide();
+					$(activeArrow).show();
+					$(".tab_content_c").hide();
+					var activeTab = $(this).find("a").attr("href");
+					$(activeTab).fadeIn();
+					return false;
+				});
+
+			});
+
+			function pictrans(jsonurl){
+				$.getJSON(jsonurl+'?v='+new Date, function(json){
+					layer.photos({
+						photos: json
+						,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+					});
+				});
+			}
+		</script>
+		{/literal}
+		<div class="main">
+			<div class="ctitle">
+				<p><span class="bigc">运营报告 </span></p>
+			</div>
+			<div class="cql_rp_line"></div>
+			<div class="c1">
+				<div class="container">
+					<div class="nav_container">
+						<div class="nav_top" style="margin-left:70px;">
+							<div class="tag">
+								<div class="arrow"> <em>◆</em><span>◆</span> </div>2017年<a href="#tab1"></a>
+							</div>
+						</div>
+						<div class="nav_top" style="margin-left:120px;">
+							<div class="tag">
+								<div class="arrow"> <em>◆</em><span>◆</span> </div>2016年<a href="#tab2"></a>
+							</div>
+						</div>
+						<div class="nav_bottom">
+							<div style="width:100px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:30px;display:inline-block;"></div>
+							<div class="circle one active"><a href="#tab1"></a></div>
+							<div style="width:250px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:15px;display:inline-block;"></div>
+							<div class="circle two"><a href="#tab2"></a></div>
+							<div style="width:750px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:15px;display:inline-block;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tab_container">
+					<div id="tab1" class="tab_content" style="display: block; ">
+						<ul>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_all.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2017_1.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">彩麒麟2017年度运营报告</div>
+										<div class="report_dur">数据时间：2017.01.01-2017.12.31</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_all.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_3s.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2017_2.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rright">彩麒麟2017第三季度运营报告</div>
+										<div class="report_dur">数据时间：2017.07.01-2017.09.30</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_3s.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_half.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2017_3.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">&nbsp;&nbsp;&nbsp;彩麒麟2017半年度运营报告</div>
+										<div class="report_dur">数据时间：2017.01.01-2017.06.30</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_half.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_1s.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2017_4.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rright">彩麒麟2017第一季度运营报告</div>
+										<div class="report_dur">数据时间：2017.01.01-2017.03.31</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_1s.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="tab2" class="tab_content" style="display: block; ">
+						<ul>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_all.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2016_1.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">彩麒麟2016年度运营报告</div>
+										<div class="report_dur">数据时间：2016.01.01-2016.12.31</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_all.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_3s.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2016_2.png" /></b>
+								<div class="report_foot">
+									<div class="vline"></div>
+										<div class="report_name rright">彩麒麟2016第三季度运营报告</div>
+										<div class="report_dur">数据时间：2016.07.01-2016.09.30</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_3s.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_half.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/2016_3.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">&nbsp;&nbsp;&nbsp;彩麒麟2016半年度运营报告</div>
+										<div class="report_dur">数据时间：2016.01.01-2016.06.30</div>
+										<div class="report_btn" onclick="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_half.json');">立即查看</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="ctitle" style="margin-top:30px;">
+				<p><span class="bigc">财务报告</span></p>
+			</div>
+			<div class="cql_rp_line"></div>
+			<div class="c1">
+				<div class="container_c">
+					<div class="nav_container_c">
+						<div class="nav_top_c" style="margin-left:70px;">
+							<div class="tag_c">
+								<div class="arrow_c"> <em>◆</em><span>◆</span> </div>2017年<a href="#tab1_c"></a>
+							</div>
+						</div>
+						<div class="nav_top_c" style="margin-left:120px;">
+							<div class="tag_c">
+								<div class="arrow_c"> <em>◆</em><span>◆</span> </div>2016年<a href="#tab2_c"></a>
+							</div>
+						</div>
+						<div class="nav_bottom_c">
+							<div style="width:100px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:30px;display:inline-block;"></div>
+							<div class="circle_c one_c active"><a href="#tab1_c"></a></div>
+							<div style="width:250px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:15px;display:inline-block;"></div>
+							<div class="circle_c two_c"><a href="#tab2_c"></a></div>
+							<div style="width:750px;height:2px;background-color:#d8d8d8;overflow:hidden;margin-left:15px;display:inline-block;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tab_container_c">
+					<div id="tab1_c" class="tab_content_c" style="display: block; ">
+						<ul>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2017_sj.json');" ><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/sj_1.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">彩麒麟2017年度财务报告</div>
+										<div class="report_dur">数据时间：2017.01.01-2017.12.31</div>
+										<div class="report_btn">立即查看</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="tab2_c" class="tab_content_c" style="display: block; ">
+						<ul>
+							<li>
+								<a href="javascript:pictrans('http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/json/2016_sj.json');"><b><img src="http://bzp2p-caiqilin.b0.upaiyun.com/cql_custom_coinfo/sj_1.png" /></b>
+									<div class="report_foot">
+										<div class="vline"></div>
+										<div class="report_name rleft">彩麒麟2016年度财务报告</div>
+										<div class="report_dur">数据时间：2016.01.01-2016.12.31</div>
+										<div class="report_btn">立即查看</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:100%;height:80px;">&nbsp;</div>
+<!--运营报告--> 
+{include file="about/footer.html"}

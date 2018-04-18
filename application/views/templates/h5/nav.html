@@ -1,0 +1,22 @@
+            {literal}
+            <script>
+                $(".nav-list").click(function(){$(".nav-list").removeClass;$(this).addClass("active");});
+                $(document).ready(function(){
+                    if($(".nav-list.active").index()==4){$(".nav-head").scrollLeft(380);};
+                    if($(".nav-list.active").index()==5){$(".nav-head").scrollLeft(560);};
+                    if($(".nav-list.active").index()==6){$(".nav-head").scrollLeft(740);};
+                });
+            </script>
+            {/literal}
+            <div class="top-nav">
+                <ul class="nav-layout nav-head" id="nav-head">
+                    <li class="nav-list{$data.navstatus1}"><a href="?id=1">基本信息</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus2}"><a href="?id=2">安全保障</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus3}"><a href="?id=3">运营报告</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus4}"><a href="?id=4">风险管理</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus5}"><a href="?id=5">监管制度</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus6}"><a href="?id=6">信披声明</a><div class="line"></div></li>
+                    <li class="nav-list{$data.navstatus7}"><a href="?id=7">联系我们</a><div class="line"></div></li>
+                </ul>
+            </div>
+            <div class="top_blank"></div>

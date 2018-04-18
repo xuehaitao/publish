@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.wrap {
+    width: 1200px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border-top: 2px solid #267CCB;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+    border-bottom: 1px solid #CDCDCD;
+    margin: 60px auto 53px auto;
+}
+
+.wrap div {
+    padding: 0 82px;
+}
+
+.wrap .n-tit {
+    height: 72px;
+    line-height: 72px;
+    font-size: 18px;
+    color: #424242;
+    border-bottom: 1px solid #CDCDCD;
+}
+
+.wrap .n-name {
+    padding-top: 50px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    color: #267CCB;
+}
+
+.wrap .n-time {
+    font-size: 14px;
+    color: #424242;
+    padding-bottom: 40px;
+}
+
+.line {
+    font-size: 0;
+    border-bottom: 1px dotted #CDCDCD;
+    overflow: hidden;
+    margin: 0 82px;
+}
+
+.wrap .n-conts {
+    padding-top: 29px;
+}
+
+.wrap .n-conts p {
+    font-size: 14px;
+    color: #424242;
+    line-height: 36px;
+}
+
+.wrap .n-foot {
+    text-align: right;
+    font-size: 14px;
+    color: #424242;
+    line-height: 20px;
+    padding-bottom: 94px;
+}
